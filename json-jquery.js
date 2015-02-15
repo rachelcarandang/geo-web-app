@@ -1,0 +1,121 @@
+// var data = { "users" : [ 
+// {
+// "firstName" : "Ray" , "lastName" : "Jones"
+// },
+// {
+// "firstName" : "R" , "lastName" : "C"
+// },
+
+// ]};
+// //alert(data.users[0].firstName);
+
+// var output = "<ul>";
+// for (var user in data.users) {
+//     output += "<li><i>" + data.users[user].firstName + "</i></li>";
+// }
+// output += "</ul>";
+
+// document.getElementById("placeholder").innerHTML = output;
+
+
+// $.getJSON('sightings.json', function(data) {
+// }.error(function(xhr) {
+//     alert(xhr)
+// }
+// );
+
+///////////////////////////////////////////
+// SOMEHOW THIS WORKS /////////////////////
+///////////////////////////////////////////
+$.ajax({                    
+    url: 'http://127.0.0.1:5000/sightings/',
+    dataType: 'jsonp',
+    cache: false,
+    success: function( data, status ){
+        alert('radi');
+        alert(JSON.stringify(data));
+
+        //alert( data.responseData.results.length + ' results found!' );
+    },
+    error: function(xhr, textStatus, err) { //odstampaj textStatus, err jbt
+        alert('ne radi');
+        alert(textStatus);
+        alert(err);
+        alert("readyState: "+xhr.readyState+"\n xhrStatus: "+xhr.status);
+        alert("responseText: "+xhr.responseText);
+    }
+}); 
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+
+//document.getElementById("ufos").innerHTML = "testing";
+
+
+// $(document).ready(function(){
+//     //attach a jQuery live event to the button
+//     $('#getdata-button').live('click', function(){
+//         $.getJSON('json-data.php', function(data) {
+//             //alert(data); //uncomment this for debug
+//             //alert (data.item1+" "+data.item2+" "+data.item3); //further debug
+//             $('#showdata').html("<p>item1="+data.item1+" item2="+data.item2+" item3="+data.item3+"</p>");
+//         });
+//     });
+// });
+
+// $(document).ready(function(){
+//     $('#getdata-button').live('click', function(){
+//         $.getJSON('/sightings', {}, function(data) {
+//             $('#showdata').html("<p>item1="+data.item1+" item2="+data.item2+" item3="+data.item3+"</p>");
+//         });
+//     });
+// });
+
+// $.ajax({
+// type: "GET",
+// url: '/sightings',
+// async: false,
+
+
+ // $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+ //      {
+ //        tags: "mount rainier",
+ //        tagmode: "any",
+ //        format: "json"
+ //      },
+ //      function(data) {
+ //        $.each(data.items, function(i,item){
+ //          $("<img/>").text("hello world!");
+ //          if ( i == 3 ) return false;
+ //        });
+ //      });
+
+
+ // $.getJSON("/sightings",
+ //      function(data) {
+ // 	  var items = [];
+ //        $.each(data, function(key,value){
+ //          items.push( "<li id='" + key + "'>" + val + "</li>" );
+ //        });
+ //  $( "<ul/>", {
+ //    "class": "my-new-list",
+ //    html: items.join( "" )
+ //  }).appendTo( "body" );
+ //      });
+
+
+// $.ajax({
+// type: "POST",
+// url: "/sightings",
+// contentType: "application/json; charset=utf-8",
+// dataType: "json",
+// success: function (result) {
+// var Mydata = result.d;
+// //$("#dictionary").append(Mydata);
+// $("p").text("Hello world!");
+// }
+// });
+// });
+// });
