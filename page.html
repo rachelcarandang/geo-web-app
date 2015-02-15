@@ -15,16 +15,60 @@
 <!-- </body> -->
 <!-- </html> -->
 <html>
-    <head>
-        <style>img{ height: 100px; float: left; }</style>
-        <script src="jquery.js"></script>
+  <head>
 
-    </head>
-    <body>
+    <!-- <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> -->
+    <!-- <meta charset="utf-8"> -->
+    <!-- <style>img{ height: 100px; float: left; }</style> -->
+    <!-- <script src="json-jquery.js">    </script> -->
+    <!-- <style> -->
+    <!--   html, body, #map-canvas { -->
+    <!--   height: 80%; -->
+    <!--   width: 80%; -->
+    <!--   margin: 0px; -->
+    <!--   padding: 0px -->
+    <!--   margin-right: -5px; -->
+    <!--   } -->
+    <!--   #panel { -->
+    <!--   position: absolute; -->
+    <!--   top: 5px; -->
+    <!--   left: 50%; -->
+    <!--   margin-left: -180px; -->
+    <!--   z-index: 5; -->
+    <!--   background-color: #fff; -->
+    <!--   padding: 5px; -->
+    <!--   border: 1px solid #999; -->
+    <!--   } -->
+    <!-- </style> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+    <!-- <script src="geocode.js"></script> -->
 
-    <script src="json-jquery.js">    </script>
-        <script src="jquery.js"></script>
+  </head>
+  <body>
+
+    <!-- <\!-- map section -\->  -->
+    <!-- <div id="panel"> -->
+    <!--   <input id="address" type="textbox" value="Sydney, NSW"> -->
+    <!--   <input type="button" value="Geocode" onclick="codeAddress()"> -->
+    <!-- </div> -->
+    <!-- <div id="map-canvas"></div> -->
 
 
-    </body>
+    <!-- begin user_input -->
+    <div id='user_input'>
+      <input type='text' id='limit'>
+      <input type='button' id='submit_limit' value='Enter'>
+      <p></p>
+      <b>Errors:</b>
+      <div id='errors'></div>
+      <b>Raw Output:</b>
+      <div id='raw_output'></div>
+      <b>Clean Output:</b>
+      <div id='clean_output'></div>
+    </div> <!-- end user_input -->
+
+
+    <script src="jquery.js"></script>
+    <script src="json-jquery.js"></script>
+  </body>
 </html>
